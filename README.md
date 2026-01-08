@@ -22,6 +22,7 @@ The data architecture for this project follows Medallion Architecture **Bronze**
 
 - The **gold.dim_customers** view is created by combining **silver.crm_cust_info table with the silver.erp_cust_az12 and silver.erp_loc_a101 tables**
 - The **gold.dim_products** view is created by combining **silver.crm_prd_info table with silver.erp_px_cat_g1v2 table**
+- The **gold.fact_sales** view is related to the **gold.dim_customers** and **gold.dim_products** views through the **customer_key** and **product_key** respectively
 
 ![Data Architecture](docs/data_model.png)
 
